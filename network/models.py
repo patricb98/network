@@ -20,4 +20,4 @@ class Post(models.Model):
     likes = models.ManyToManyField(User, blank=True, related_name='liked_posts') 
 
     def __str__ (self):
-        return f"{self.user.username}: {self.content[:30]}: {self.timestamp}"
+        return f"{self.id}: {self.user.username}: {self.content[:30]}: {self.timestamp}"
